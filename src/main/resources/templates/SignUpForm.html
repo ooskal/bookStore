@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" th:href="@{/style.css}"/>
+  <title>BookStore</title>
+</head>
+<body>
+
+<div class="container">
+  <div>
+    <h1>BookStore</h1>
+  </div>
+</div>
+<div>
+  <ul>
+    <li><a href="/">HOME</a></li>
+    <li><a href="/myPage">마이페이지</a></li>
+    <li><a href="/login">로그인</a></li>
+    <li><a class="active" href="/SignUpForm">회원가입</a></li>
+  </ul>
+</div>
+<form action="SignUpForm" th:object="${user}" method="post">
+  ID:<br>
+  <input type="text" name="id"><br>
+  PW:<br>
+  <input type="text" name="pw"><br>
+  NAME:<br>
+  <input type="text" name="name"><br>
+  <button type="submit">회원가입</button>
+  </form>
+
+
+</body>
+</html>
